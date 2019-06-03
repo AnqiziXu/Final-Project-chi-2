@@ -8,11 +8,11 @@ For this project we will analyze housing dataset to help people find the housing
 
 Our target audience group is 25-35 years old people who want to start a family and set up homes in Seattle. This group typically will be looking for homes which are suitable for their children, school, and work. In other words, our analysis will be mainly focusing on the following questions:
 
-Is the house big enough for children to have a playroom?
-Does it have enough bedrooms for parents and children?
-Does this house have appropriate price?
-Where is this house located?
-What is the condition of this house?
+- Is the house big enough for children to have a playroom?
+- Does it have enough bedrooms for parents and children?
+- Does this house have appropriate price?
+- Where is this house located?
+- What is the condition of this house?
 	
 
 Technical Description (See above)
@@ -29,9 +29,9 @@ There are many comments about typos in this dataset on Kaggle.com, therefore, we
 	The major libraries we are going to use are ggplot2, jsonlite, and we are also going to elaborate more functions from libraries like tidyr which specialized functions like fill, and ggmap for plotting the points onto real map - easy to see the location of the map, and we can fill the points with different levels, like ones we did for A5 assignment. 
 
 Questions that we will be able to answer with our dataset include: 
-Which region have expensive price and which region have cheap price? And why this region have such high price?
-How big is the house? How much does the house cost per square foot?
-What is the housing condition in a given region?
-Which regions have a higher selling rate?
-Which regions boast more up-to-date homes?
-When is the right time to sell a house?
+- Which region have expensive price and which region have cheap price? And why does this region have such a high price?
+- How big is the house? How much does the house cost per square foot?
+- What is the housing condition in a given region?
+- Which regions have a higher selling rate?
+- Which regions boast more up-to-date homes?
+- When is the right time to sell a house?
