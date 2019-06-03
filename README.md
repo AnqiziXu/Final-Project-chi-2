@@ -17,16 +17,16 @@ Our target audience group is 25-35 years old people who want to start a family a
 
 Technical Description (See above)
 
-	The dataset will be retrieved from Kaggle.com in .csv format. Therefore, we will read the data in R, and we will analyze the data by creating an interactive visualization platform. 
+The dataset will be retrieved from Kaggle.com in .csv format. Therefore, we will read the data in R, and we will analyze the data by creating an interactive visualization platform. 
 
 Data Wrangling
 
 In general, the average size of a family house is around 3-bedroom and 3 bathrooms. Therefore, we will be filtering out houses that are extremely small, like one-bedroom house, as well as extremely big houses, like 6-bedroom houses. We will also be filtering out the observation that have no bedrooms or bathrooms recorded. 
 There are many comments about typos in this dataset on Kaggle.com, therefore, we will clear our data by omitting those observations.
 
-	To save the memory and space of the workspace, we will delete some of the 19 house features. Because the total square feet of the house is provided, variables such as the lot size, basement size, and floors will be omitted. However, the absolute locations and other features related to our analysis will be kept in our dataset. At the end, only 9 variables out of 21 will be used in our project.
+To save the memory and space of the workspace, we will delete some of the 19 house features. Because the total square feet of the house is provided, variables such as the lot size, basement size, and floors will be omitted. However, the absolute locations and other features related to our analysis will be kept in our dataset. At the end, only 9 variables out of 21 will be used in our project.
 
-	The major libraries we are going to use are ggplot2, jsonlite, and we are also going to elaborate more functions from libraries like tidyr which specialized functions like fill, and ggmap for plotting the points onto real map - easy to see the location of the map, and we can fill the points with different levels, like ones we did for A5 assignment. 
+The major libraries we are going to use are ggplot2, jsonlite, and we are also going to elaborate more functions from libraries like tidyr which specialized functions like fill, and ggmap for plotting the points onto real map - easy to see the location of the map, and we can fill the points with different levels, like ones we did for A5 assignment. 
 
 Questions that we will be able to answer with our dataset include: 
 - Which region have expensive price and which region have cheap price? And why does this region have such a high price?
