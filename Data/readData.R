@@ -10,3 +10,6 @@ suited_house <- data %>%
   select(-floors, -sqft_lot, -waterfront, 
          -grade, -sqft_living15,
          -sqft_lot15, -view)
+
+write.csv(suited_house, file = "suited_house.csv")
+
