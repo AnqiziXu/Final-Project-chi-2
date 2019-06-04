@@ -3,6 +3,7 @@ library(shiny)
 library(leaflet)
 
 
+
 shinyUI(fluidPage(
   
   titlePanel("Old Faithful Geyser Data"),
@@ -19,7 +20,14 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+#      plotOutput("distPlot")
+      tabsetPanel(
+      tabPanel("Summary", verbatimTextOutput("summary")),
+      tabPanel("Maps", plotOutput("distPlot")),
+      tabPanel("Discussion", tableOutput("table"))
+      )
     )
   )
 ))
+
+
