@@ -47,8 +47,9 @@ shinyUI(fluidPage(
     mainPanel(
 #      plotOutput("distPlot")
       tabsetPanel(
+      tabPanel("Introduction",verbatimTextOutput("Introduction")),
       tabPanel("Maps", leafletOutput("mapPlot")),
-      tabPanel("Summary", verbatimTextOutput("summary")),
+     # tabPanel("Summary", verbatimTextOutput("summary")),
       tabPanel("Discussion", tableOutput("table"))
       )
     )
