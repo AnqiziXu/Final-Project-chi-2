@@ -2,7 +2,7 @@
 library(shiny)
 library(leaflet)
 
-
+housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 
 shinyUI(fluidPage(
   
@@ -11,11 +11,11 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bedrooms:",
-                   min = 2,
-                   max = 6,
-                   value = 2),
+      sliderInput("bins",
+                  "Number of bedrooms:",
+                  min = 2,
+                  max = 6,
+                  value = 2),
        sliderInput("bins",
                    "Number of bathrooms:",
                    min = 2,
@@ -47,8 +47,8 @@ shinyUI(fluidPage(
     mainPanel(
 #      plotOutput("distPlot")
       tabsetPanel(
+      tabPanel("Maps", leafletOutput("mapPlot")),
       tabPanel("Summary", verbatimTextOutput("summary")),
-      tabPanel("Maps", plotOutput("distPlot")),
       tabPanel("Discussion", tableOutput("table"))
       )
     )
