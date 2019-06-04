@@ -6,7 +6,7 @@ library(leaflet)
 
 shinyUI(fluidPage(
   
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("House Sales in 2014 and 2015"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
