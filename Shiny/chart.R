@@ -2,6 +2,7 @@ source('filter.R')
 library('ggplot2')
 library('dplyr')
 
+
 # output a table for that particular zipcode and condition (sqft_living, bedrooms, bathrooms, etc)
 chart <- function(inputData, condition) {
   if (condition != 'sqft_living') {
