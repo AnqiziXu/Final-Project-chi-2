@@ -61,7 +61,8 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
       )
     )
   ),
-  tabPanel("Summary")
+  tabPanel("Summary",
+           mainPanel("Summary dats",dataTableOutput("dataTable")))
 ))
 
 
