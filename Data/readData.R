@@ -10,7 +10,7 @@ suited_house <- data %>%
           & bathrooms > 1 & bathrooms <6) %>%
   select(-floors, -sqft_lot, -waterfront, 
          -grade, -sqft_living15,
-         -sqft_lot15, -view)
+         -sqft_lot15, -view, -id)
 suited_house$month  <- (substr(suited_house$month, 5, 6))  #Takes only the month of date
 
 #remove the big data from memory

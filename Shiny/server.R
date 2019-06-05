@@ -12,9 +12,12 @@ source('../Data/readData.R')
 shinyServer(function(input, output) {
    
   output$mapPlot <- renderLeaflet({
-    leaflet() %>%
+    leaflet(conditionFilter(input)) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
-      setView(lng=-122.3 , lat = 47.6, zoom= 12)
+      setView(lng=-122.3 , lat = 47.6, zoom= 12) %>% 
+      addMarkers(lat = ~lat,
+                 lng = ~long,
+                 popup = paste(conditionFilter(input)))
   })
   
   output$test <- renderText({
@@ -28,16 +31,4 @@ shinyServer(function(input, output) {
   
   
 })
-
-#shinyServer(function(input,output){
-# filtered <- housing %>% 
-#   filter(bedrooms = input$rooms) %>% 
-#    filter(bathrooms = input$bath) %>% 
-#    filter(zipcode = input$Zip) %>% 
-#    filter(price > input$minprice) %>% 
-#    filter(price < input$maxxprice) %>% 
-#    filter(condition = input$condition) %>%
-#    filter(sqft_living < (input$sqft + 100))
-#})
-
 
