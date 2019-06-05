@@ -15,7 +15,7 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
                                        includeMarkdown("source.Rmd"))
                    ),
                    
-                   tabPanel("Maps",
+                   tabPanel("Data Display",
                             
                             # Sidebar with a slider input for number of bins 
                             sidebarLayout(
@@ -54,21 +54,19 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
                                             "Month of sale",
                                             min = 01,
                                             max = 012,
-                                            value = 1)
+                                            value = 10)
                               ),
                               
                               # Show a plot of the generated distribution
                               mainPanel(
-                                tabPanel("Maps", leafletOutput("mapPlot"))
+                                tabsetPanel(type = "tabs",
+                                tabPanel("Maps", leafletOutput("mapPlot")),
                                 #      tabPanel("Text", textOutput('test'))
-                              )
+                                tabPanel("Chart",dataTableOutput("DataTable"))
+                              ))
                             )
-                   ),
-                   
-                   tabPanel("Summary",
-                            mainPanel("Summary data",dataTableOutput("DataTable"))
-                            
                    )
+                   
 ))
 
 
