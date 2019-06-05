@@ -7,9 +7,15 @@ housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 
 
 shinyUI(navbarPage("House Sales in 2014 and 2015",
-
-  tabPanel("Introduction"),
-  tabPanel("Maps",
+                   
+   navbarMenu("Introduction",
+              tabPanel("Purpose",
+              includeMarkdown("intro.Rmd")),
+              tabPanel("Source",
+              includeMarkdown("source.Rmd"))
+   ),
+              
+   tabPanel("Maps",
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
