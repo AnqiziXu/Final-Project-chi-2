@@ -38,8 +38,9 @@ shinyServer(function(input, output) {
           '.. The chart function have ', nrow(chartTest), ' rows. ',sep = '')
   })
   
-  output$dataTable <- renderDataTable({
-    chart(input,condition)
+  output$DataTable <- renderDataTable({
+  
+    df <- conditionFilter(input)
   })
   
 })
