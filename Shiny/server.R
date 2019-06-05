@@ -10,14 +10,23 @@ housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 source('../Data/readData.R')
 
 shinyServer(function(input, output) {
-   
+
+  data <- reactive({
+    x <- df
+  })
+     
   output$mapPlot <- renderLeaflet({
-    leaflet(conditionFilter(input)) %>%
+    df <- conditionFilter(input)
+    
+    leaflet(df) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
       setView(lng=-122.3 , lat = 47.6, zoom= 12) %>% 
       addMarkers(lat = ~lat,
                  lng = ~long,
-                 popup = paste(conditionFilter(input)))
+                 popup = paste("Price:",df$price,"<br>","Number of Rooms:",df$bedrooms,"<br>",
+                               "Number of Bathrooms:",df$bathrooms,"<br>",
+                               "Square Footage of Living Space:",df$sqft_living,"<br>",
+                               "Month Sold:",df$month))
   })
   
   output$test <- renderText({
