@@ -12,3 +12,5 @@ Our application helps you find the best fit home for you within King County. We 
 
 Our application is organized into several tabs, including, a map that shows the homes within King County alongside a navigation bar with filtering capabilities. The next tab shows a table that lists homes that fall into your specific filters as it shows the exact price, square footage, and number of rooms of particular homes.  
 
+![](seattle.house.jpg)
+
