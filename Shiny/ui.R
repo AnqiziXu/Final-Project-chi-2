@@ -4,9 +4,12 @@ library(leaflet)
 
 housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 
-shinyUI(fluidPage(
-  
-  titlePanel("House Sales in 2014 and 2015"),
+
+
+shinyUI(navbarPage("House Sales in 2014 and 2015",
+
+  tabPanel("Introduction"),
+  tabPanel("Maps",
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
@@ -40,20 +43,17 @@ shinyUI(fluidPage(
                    "Living Square Footage",
                    min = 0,
                    max = 10000,
-                   value = c(0,250))
+                   value = 250)
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-#      plotOutput("distPlot")
-      tabsetPanel(
-      tabPanel("Introduction",verbatimTextOutput("Introduction")),
-      tabPanel("Maps", leafletOutput("mapPlot")),
-     # tabPanel("Summary", verbatimTextOutput("summary")),
-      tabPanel("Discussion", tableOutput("table"))
+      tabPanel("Maps", leafletOutput("mapPlot"))
+    
       )
     )
-  )
+  ),
+  tabPanel("Summary")
 ))
 
 
