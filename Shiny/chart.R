@@ -16,4 +16,6 @@ chart <- function(inputData, condition) {
       group_by(interval) %>%
       summarise(average_price = mean(price), number = n())
   }
+  
+  return(data)
 }
