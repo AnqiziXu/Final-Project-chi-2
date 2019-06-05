@@ -1,0 +1,14 @@
+---
+title: "source"
+author: "Anqizi Xu"
+date: "2019年6月4日"
+output: html_document
+---
+
+# Source
+
+
+##### We retrieved the data from a website called [kaggle.com](https://www.kaggle.com/gabriellima/house-sales-in-king-county-usa/data). Kaggle is an open source data sharing website that is meant to facilitate the process of exploring and building data models for certain types of data. The website also is a place where data scientists can come together to collaborate in projects as well as in data problem competitions. The dataset that we are using from Kaggle is that of house purchases made between May 2014 and May 2015 in King County. There are a lot of categories regarding the sales and not all of them are necessary for our app to work properly; so our team has filtered out the number of floors, the square footage of the lot (we included the livable square footage), whether it is a waterfront property, and the lot data for 2015 since the lot sizes did not change.
+
+
+![](kaggle.logo.png)
