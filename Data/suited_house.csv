@@ -1,4 +1,4 @@
-"","id","date","price","bedrooms","bathrooms","sqft_living","condition","sqft_above","sqft_basement","yr_built","yr_renovated","zipcode","lat","long"
+"","id","month","price","bedrooms","bathrooms","sqft_living","condition","sqft_above","sqft_basement","yr_built","yr_renovated","zipcode","lat","long"
 "1",6414100192,"12",538000,3,2.25,2570,3,2170,400,1951,1991,98125,47.721,-122.319
 "2",2487200875,"12",604000,4,3,1960,5,1050,910,1965,0,98136,47.5208,-122.393
 "3",1954400510,"02",510000,3,2,1680,3,1680,0,1987,0,98074,47.6168,-122.045

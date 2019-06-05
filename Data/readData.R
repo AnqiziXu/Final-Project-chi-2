@@ -13,6 +13,9 @@ suited_house <- data %>%
          -sqft_lot15, -view)
 suited_house$month  <- (substr(suited_house$month, 5, 6))  #Takes only the month of date
 
+#remove the big data from memory
+rm(data)
 
+# you should save this to the Data/ repository NOT SHINY. 
 write.csv(suited_house, file = "suited_house.csv")
 
