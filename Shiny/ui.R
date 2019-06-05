@@ -50,13 +50,14 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
                    "Living Square Footage",
                    min = 0,
                    max = 10000,
-                   value = 250)
+                   # why are you changing this to one side slider?
+                   value = c(0, 250))
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-      tabPanel("Maps", leafletOutput("mapPlot"))
-    
+      tabPanel("Maps", leafletOutput("mapPlot")),
+      tabPanel("Text", textOutput('test'))
       )
     )
   ),
