@@ -55,8 +55,8 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
     
     # Show a plot of the generated distribution
     mainPanel(
-      tabPanel("Maps", leafletOutput("mapPlot")),
-      tabPanel("Text", textOutput('test'))
+      tabPanel("Maps", leafletOutput("mapPlot"))
+#      tabPanel("Text", textOutput('test'))
       )
     )
   ),
