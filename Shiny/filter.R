@@ -10,7 +10,9 @@ conditionFilter <- function(inputData) {
   filtered <- suited_house %>% 
     filter(bedrooms <= inputData$rooms & bathrooms <= inputData$bath 
            & zipcode == inputData$Zip & between(price, priceRange[1], priceRange[2])
-            & condition <= inputData$condition & between(sqft_living, sqftLiv[1], sqftLiv[2]))
+           & condition <= inputData$condition 
+           & between(sqft_living, sqftLiv[1], sqftLiv[2])
+           & month == inputData$month)
   
   return(filtered)
 }
