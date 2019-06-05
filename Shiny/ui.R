@@ -1,12 +1,13 @@
 
 library(shiny)
 library(leaflet)
+library(shinythemes)
 
 housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 
 
 
-shinyUI(navbarPage("House Sales in 2014 and 2015",
+shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme(flatly),
                    
    navbarMenu("Introduction",
               tabPanel("Purpose",
