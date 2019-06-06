@@ -1,11 +1,8 @@
 
 library(shiny)
 library(leaflet)
+# Pass the function that reactively filter out the data based on the user's input
 source('filter.R')
-source('chart.R')
-
-# you don't need to read .csv data again. Just source it. This line is useless
-housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
 
 source('../Data/readData.R')
 
@@ -14,7 +11,8 @@ shinyServer(function(input, output) {
   data <- reactive({
     x <- df
   })
-     
+  
+  # Output the map based on the widget selection 
   output$mapPlot <- renderLeaflet({
     df <- conditionFilter(input)
     
@@ -28,18 +26,9 @@ shinyServer(function(input, output) {
                                "Square Footage of Living Space:",df$sqft_living,"<br>",
                                "Month Sold:",df$month))
   })
-  
-  output$test <- renderText({
-    filtered <- conditionFilter(input)
-    chartTest <- chart(filtered, 'sqft_living')
-    paste('For conditionFilter function, the parameters are: number of bedrooms: ', input$rooms, 
-          '. Number of bathrooms: ', input$bath, '. Zipcode: ', input$Zip, '. Price range: ', input$price[1], '-', input$price[2], 
-          '. Condition: ', input$condition, '. Living feet: ', input$sqft[1], '-', input$sqft, '. The output have ', nrow(filtered), ' rows in total.',
-          '.. The chart function have ', nrow(chartTest), ' rows. ',sep = '')
-  })
-  
+ 
+  # Output the corresponding chart with more detailed information about the filtered data
   output$DataTable <- renderDataTable({
-  
     df <- conditionFilter(input)
   })
   

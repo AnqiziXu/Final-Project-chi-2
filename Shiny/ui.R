@@ -2,22 +2,17 @@ library(shiny)
 library(leaflet)
 library(shinythemes)
 
-housing <- read.csv("../Data/suited_house.csv", stringsAsFactors = FALSE)
-
-
-
 shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
-                   
-                   navbarMenu("Introduction",
-                              tabPanel("Purpose",
-                                       includeMarkdown("intro.Rmd")),
-                              tabPanel("Source",
-                                       includeMarkdown("source.Rmd"))
+          navbarMenu("Introduction",
+                    tabPanel("Purpose",
+                          includeMarkdown("intro.Rmd")),
+                    tabPanel("Source",
+                          includeMarkdown("source.Rmd"))
                    ),
                    
                    tabPanel("Data Display",
                             
-                            # Sidebar with a slider input for number of bins 
+                            # Sidebar with different widget that user can change manually 
                             sidebarLayout(
                               sidebarPanel(
                                 sliderInput("rooms",
@@ -57,16 +52,13 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
                                             value = 10)
                               ),
                               
-                              # Show a plot of the generated distribution
-                              mainPanel(
-                                tabsetPanel(type = "tabs",
-                                tabPanel("Maps", leafletOutput("mapPlot")),
-                                #      tabPanel("Text", textOutput('test'))
-                                tabPanel("Chart",dataTableOutput("DataTable"))
-                              ))
-                            )
-                   )
-                   
+                 mainPanel(
+                     tabsetPanel(type = "tabs",
+                     tabPanel("Maps", leafletOutput("mapPlot")),
+                     tabPanel("Chart",dataTableOutput("DataTable"))
+                ))
+           )
+      )              
 ))
 
 
