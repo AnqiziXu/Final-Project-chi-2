@@ -54,9 +54,9 @@ shinyUI(navbarPage("House Sales in 2014 and 2015", theme = shinytheme("flatly"),
                               
                  mainPanel(
                      tabsetPanel(type = "tabs",
-                     tabPanel("Maps", leafletOutput("mapPlot")),
-                     tabPanel("Chart",dataTableOutput("DataTable"))
-                ))
+                     tabPanel("Maps", leafletOutput("mapPlot"), textOutput(outputId = "zoomMessage")),
+                     tabPanel("Chart",dataTableOutput("DataTable")))
+                )
            )
       )              
 ))

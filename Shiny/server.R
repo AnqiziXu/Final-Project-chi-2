@@ -32,5 +32,9 @@ shinyServer(function(input, output) {
     df <- conditionFilter(input)
   })
   
+  output$zoomMessage <- renderText({
+    paste("Please zoom out the map evertime you change the Zipcode. The houses will be shown on the map once you zoom out.")
+  })
+  
 })
 
