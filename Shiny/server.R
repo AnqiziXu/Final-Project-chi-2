@@ -4,7 +4,7 @@ library(leaflet)
 # Pass the function that reactively filter out the data based on the user's input
 source('filter.R')
 
-source('./Data/readData.R')
+source('./readData.R')
 
 shinyServer(function(input, output) {
 

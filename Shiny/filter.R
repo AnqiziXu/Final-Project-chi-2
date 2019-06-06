@@ -1,4 +1,4 @@
-source('./data/readData.R')
+source('./readData.R')
 
 conditionFilter <- function(inputData) {
   # function that takes list of input value as parameters, and return the filtered data
