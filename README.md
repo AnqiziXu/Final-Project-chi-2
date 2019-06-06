@@ -6,6 +6,7 @@ Project Description
 
 For this project we will analyze housing dataset to help people find the housing trend in greater Seattle, WA. We will mainly focus on the entire King County area. The dataset is provided by King County, Washington on Kaggle.com, with 21613 observations and 19 different house features plus the home ID and price. The data includes houses sold between May 2014 and May 2015, and it contains detailed information about housing, such as price, bedrooms, bathrooms, condition, and absolute locations (longitude and latitude). 
 
+The project is published on ShinyApp.io and it is available by clicking [this link] (https://kevinfangsw.shinyapps.io/Shiny/)
 Our target audience group is 25-35 years old people who want to start a family and set up homes in Seattle. This group typically will be looking for homes which are suitable for their children, school, and work. In other words, our analysis will be mainly focusing on the following questions:
 
 - Is the house big enough for children to have a playroom?
