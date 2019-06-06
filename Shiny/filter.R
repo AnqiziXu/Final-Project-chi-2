@@ -12,7 +12,7 @@ conditionFilter <- function(inputData) {
            & zipcode == inputData$Zip & between(price, priceRange[1], priceRange[2])
            & condition <= inputData$condition 
            & between(sqft_living, sqftLiv[1], sqftLiv[2])
-           & month == inputData$month)
+           & as.numeric(month) == as.numeric(inputData$month))
   
   return(filtered)
 }
